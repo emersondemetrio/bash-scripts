@@ -11,3 +11,9 @@
 -   node: https://nodejs.org/en/download/
 -   nvm: https://github.com/nvm-sh/nvm
 -   yarn: https://classic.yarnpkg.com/lang/en/docs/install/
+
+## Sync
+
+```
+./sync.sh
+```
