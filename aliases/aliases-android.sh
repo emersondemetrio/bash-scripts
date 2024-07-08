@@ -1,0 +1,16 @@
+alias android_enter="adb shell input keyevent 66"
+alias android_tab="adb shell input keyevent 61"
+alias android_text="adb shell input $1"
+alias android_input="adb shell input $1"
+alias android_back="adb shell input keyevent 4"
+alias android_screenshot="adb exec-out screencap -p > android-screenshot.png"
+
+alias android_devices="adb devices"
+alias android_log="adb logcat"
+
+alias android-enter="android_enter"
+alias android-tab="android_tab"
+alias android-text="android_text"
+alias android-input="android_text"
+alias android-screenshot="android_screenshot"
+alias android-devices="android_devices"
