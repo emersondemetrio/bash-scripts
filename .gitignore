@@ -4,8 +4,8 @@ aliases/aliases-surfer.sh
 aliases/aliases-flaggr.sh
 aliases/aliases-fleet.sh
 
--rf src/verify-user.sh
--rf src/new-react-component
+src/verify-user.sh
+src/new-react-component
 src/open-fleet*
 src/new_branch.sh
 src/random-pass.py
