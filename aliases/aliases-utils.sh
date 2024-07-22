@@ -97,3 +97,6 @@ alias cald="calendar"
 
 alias sizeof="~/scripts/src/file.sh"
 alias new="~/scripts/new-terminal.sh"
+
+alias in_minutes="node ~/scripts/src/time-conversion.js"
+alias inminutes="in_minutes"

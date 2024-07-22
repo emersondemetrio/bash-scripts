@@ -1,6 +1,7 @@
 albert.tabout
 amazonwebservices.aws-toolkit-vscode
 chakrounanas.turbo-console-log
+charliermarsh.ruff
 chrmarti.regex
 dbaeumer.vscode-eslint
 esbenp.prettier-vscode
