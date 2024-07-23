@@ -99,4 +99,7 @@ alias sizeof="~/scripts/src/file.sh"
 alias new="~/scripts/new-terminal.sh"
 
 alias in_minutes="node ~/scripts/src/time-conversion.js"
-alias inminutes="in_minutes"
+alias inminutes="node ~/scripts/src/time-conversion.js"
+
+alias time-conversion="node ~/scripts/src/time-conversion.js"
+alias timeconversion="node ~/scripts/src/time-conversion.js"

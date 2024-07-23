@@ -1,63 +1,20 @@
-const round2 = (num) => Math.round(num * 100) / 100;
+const roundIn = (num, withDecimals = 2) => num.toFixed(withDecimals);
 
-const hoursToDays = (hours) => round2(hours / 24);
-const hoursToSeconds = (hours) => round2(hours * 60 * 60);
-const hoursToMinutes = (hours) => round2(hours * 60);
-
-const secondsToMinutes = (seconds) => round2(seconds / 60);
-const secondsToHours = (seconds) => round2(seconds / 60 / 60);
-const secondsToDays = (seconds) => round2(seconds / 60 / 60 / 24);
-
-const millisecondsToSeconds = (ms) => round2(ms / 1000);
-
-const minutesToSeconds = (minutes) => round2(minutes * 60);
-const minutesToHours = (minutes) => round2(minutes / 60);
-
-const toSecondsConversion = (time) => {
-	// Handle non-numeric input
-	if (isNaN(time)) {
-		return -1;
-	}
-
-	// Calculate the time in seconds for each unit
-	const minutesInS = time * 60;
-	const hoursInS = time * 60 * 60;
-	const daysInS = time * 24 * 60 * 60;
-	const weeksInS = time * 7 * 24 * 60 * 60;
-	const monthsInS = time * 30 * 24 * 60 * 60;
-
-	// Array of time units and their corresponding values and expressions
-	const timeUnits = [
-		['Minutes in S', minutesInS, `${time} * 60`],
-		['Hours in S', hoursInS, `${time} * 60 * 60`],
-		['Days in S', daysInS, `${time} * 24 * 60 * 60`],
-		['Weeks in S', weeksInS, `${time} * 7 * 24 * 60 * 60`],
-		['Months in S', monthsInS, `${time} * 30 * 24 * 60 * 60`],
-	];
-
-	// Format the output as a string with each time unit
+const explain = (time, timeUnits) => {
 	return timeUnits
-		.map(
-			([key, value, exp]) => `> ${time} ${key}:  \t${value} s \t(${exp})`
-		)
+		.map(([key, value, exp]) => `> ${time} ${key}:  \t${value} \t(${exp})`)
 		.join('\n');
 };
 
-const toMillisecondsConversion = (time) => {
-	// Handle non-numeric input
-	if (isNaN(time)) {
-		return -1;
-	}
-
-	// Calculate the time in milliseconds for each unit
+const milliSecondsConversion = (time) => {
 	const secondsInMS = time * 1000;
 	const minutesInMS = time * 60 * 1000;
 	const hoursInMS = time * 60 * 60 * 1000;
 	const daysInMS = time * 24 * 60 * 60 * 1000;
 	const weeksInMS = time * 7 * 24 * 60 * 60 * 1000;
 	const monthsInMS = time * 30 * 24 * 60 * 60 * 1000;
+	const millisecondsToSeconds = roundIn(time / 1000, 3);
 
-	// Array of time units and their corresponding values and expressions
 	const timeUnits = [
 		['Seconds in MS', secondsInMS, `${time} * 1000`],
 		['Minutes in MS', minutesInMS, `${time} * 60 * 1000`],
@@ -65,81 +22,145 @@ const toMillisecondsConversion = (time) => {
 		['Days in MS', daysInMS, `${time} * 24 * 60 * 60 * 1000`],
 		['Weeks in MS', weeksInMS, `${time} * 7 * 24 * 60 * 60 * 1000`],
 		['Months in MS', monthsInMS, `${time} * 30 * 24 * 60 * 60 * 1000`],
+		['MS to S', millisecondsToSeconds, `${time} / 1000`],
 	];
 
-	// Format the output as a string with each time unit
-	return timeUnits
-		.map(
-			([key, value, exp]) => `> ${time} ${key}:  \t${value} ms \t(${exp})`
-		)
-		.join('\n');
+	return explain(time, timeUnits);
 };
 
-const daysToWeeks = (days) => round2(days / 7);
-const daysToMonths = (days) => round2(days / 30);
+const secondsConversion = (time) => {
+	const minutesInS = time * 60;
+	const hoursInS = time * 60 * 60;
+	const daysInS = time * 24 * 60 * 60;
+	const weeksInS = time * 7 * 24 * 60 * 60;
+	const monthsInS = time * 30 * 24 * 60 * 60;
 
-const weeksToDays = (weeks) => round2(weeks * 7);
-const weeksToMonths = (weeks) => round2(weeks / 4);
+	const secondsToMinutes = roundIn(time / 60);
+	const secondsToHours = roundIn(time / 60 / 60);
+	const secondsToDays = roundIn(time / 60 / 60 / 24, 3);
 
-const summary = (time) => {
-	console.log(`
-Input: ${time}
+	const timeUnits = [
+		['Minutes in S', minutesInS, `${time} * 60`],
+		['Hours in S', hoursInS, `${time} * 60 * 60`],
+		['Days in S', daysInS, `${time} * 24 * 60 * 60`],
+		['Weeks in S', weeksInS, `${time} * 7 * 24 * 60 * 60`],
+		['Months in S', monthsInS, `${time} * 30 * 24 * 60 * 60`],
 
-> Second conversion
-> ${input} Seconds to Minutes : ${secondsToMinutes(time)} m
-> ${input} Seconds to Hours   : ${secondsToHours(time)} h
-> ${input} Seconds to Days    : ${secondsToDays(time)} d
-_____________________________________________________
-> MS Conversion
+		['Seconds in M', secondsToMinutes, `${time} / 60`],
+		['Seconds in H', secondsToHours, `${time} / 60 / 60`],
+		['Seconds in D', secondsToDays, `${time} / 60 / 60 / 24`],
+	];
 
-> ${input} MS      to Seconds : ${millisecondsToSeconds(time)} s
+	return explain(time, timeUnits);
+};
 
-> TO Seconds Conversion
-${toSecondsConversion(time)}
+const minutesConversion = (time) => {
+	const minutesToSeconds = roundIn(time * 60);
+	const minutesToHours = roundIn(time / 60);
+	const minutesToDays = roundIn(time / 60 / 24);
 
-_____________________________________________________
+	const timeUnits = [
+		['Minutes in S', minutesToSeconds, `${time} * 60`],
+		['Minutes in H', minutesToHours, `${time} / 60`],
+		['Minutes in D', minutesToDays, `${time} / 60 / 24`],
+	];
 
-> TO Milliseconds Conversion
-${toMillisecondsConversion(time)}
-_____________________________________________________
-> Minutes conversion
+	return explain(time, timeUnits);
+};
 
-> ${input} Minutes to Seconds : ${minutesToSeconds(time)} s
-> ${input} Minutes to Hours   : ${minutesToHours(time)} h
-_____________________________________________________
-> Hours conversion
+const hoursConversion = (time) => {
+	const hoursToDays = roundIn(time / 24);
+	const hoursToSeconds = roundIn(time * 60 * 60);
+	const hoursToMinutes = roundIn(time * 60);
 
-> ${input} Hours   to Seconds : ${hoursToSeconds(time)} s
-> ${input} Hours   to Minutes : ${hoursToMinutes(time)} m
-_____________________________________________________
-> Days conversion
+	const timeUnits = [
+		['Hours in D', hoursToDays, `${time} / 24`],
+		['Hours in M', hoursToMinutes, `${time} * 60`],
+		['Hours in S', hoursToSeconds, `${time} * 60 * 60`],
+	];
 
-> ${input} Hours   to Days    : ${hoursToDays(time)} d
-> ${input} Days    to Weeks   : ${daysToWeeks(time)} w
-> ${input} Days    to Months  : ${daysToMonths(time)} m
-_____________________________________________________
-> Weeks conversion
+	return explain(time, timeUnits);
+};
 
-> ${input} Weeks   to Days    : ${weeksToDays(time)} d
-> ${input} Weeks   to Months  : ${weeksToMonths(time)} m
-`);
+const daysConversion = (time) => {
+	const daysToWeeks = roundIn(time / 7);
+	const daysToMonths = roundIn(time / 30);
+
+	const timeUnits = [
+		['Days in W', daysToWeeks, `${time} / 7`],
+		['Days in Mo', daysToMonths, `${time} / 30`],
+	];
+
+	return explain(time, timeUnits);
+};
+
+const weeksConversion = (time) => {
+	const weeksToDays = roundIn(time * 7);
+	const weeksToMonths = roundIn(time / 4);
+
+	const timeUnits = [
+		['Weeks in D', weeksToDays, `${time} * 7`],
+		['Weeks in Mo', weeksToMonths, `${time} / 4`],
+	];
+
+	return explain(time, timeUnits);
+};
+
+const available = ['h', 's', 'm', 'ms', 's', 'd', 'w', 'all'];
+
+const unitFnMap = {
+	ms: milliSecondsConversion,
+
+	s: secondsConversion,
+	m: minutesConversion,
+	h: hoursConversion,
+
+	d: daysConversion,
+	w: weeksConversion,
+	all: (time) => {
+		const ms = milliSecondsConversion(time);
+		const s = secondsConversion(time);
+		const m = minutesConversion(time);
+		const h = hoursConversion(time);
+		const d = daysConversion(time);
+		const w = weeksConversion(time);
+
+		return `${ms}\n\n${s}\n\n${m}\n\n${h}\n\n${d}\n\n${w}`;
+	},
+};
+
+const summary = (time, unit) => {
+	console.log(`Time: ${time} \tUnit: ${unit}\n`);
+
+	if (!available.includes(unit)) {
+		console.error('Invalid unit provided.');
+		console.info(`Available units: ${available.join(', ')}`);
+		return;
+	}
+
+	console.log(unitFnMap[unit](time));
 };
 
 let input = 0;
+let unit = '';
 
+// Deno stuff
 if (typeof Deno !== 'undefined') {
 	input = Deno.args[0];
+	unit = Deno.args[1];
 } else {
 	input = process.argv[2];
+	unit = process.argv[3];
 }
 
 input = parseInt(input);
 
 if (typeof input === 'number' && !isNaN(input)) {
-	summary(input);
+	summary(input, unit ?? 'ms');
 } else {
 	console.error('Please provide a valid numeric input.');
-	console.info(`Example Usage: time-conversion 60`);
+	console.info(`Example Usage: time-conversion 60 ms`);
+	console.info(`Available units: [${available.join(', ')}]\n`);
 }
 
 // deno compile time-conversion.js
