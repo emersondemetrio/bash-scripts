@@ -85,7 +85,7 @@ alias conceitual="cd /Users/<your-path>/projects/conceitual; clas"
 
 alias yanr="yarn"
 
-alias github="chrome https://github.com/<your-path>"
+alias github="chrome 'https://github.com/<your-path>?tab=repositories'"
 
 alias emerson="cd ~/projects/personal/<your-path>.github.io"
 alias emers="emerson"
@@ -103,3 +103,5 @@ alias inminutes="node ~/scripts/src/time-conversion.js"
 
 alias time-conversion="node ~/scripts/src/time-conversion.js"
 alias timeconversion="node ~/scripts/src/time-conversion.js"
+
+alias http-code="node ~/scripts/src/http-codes.js"

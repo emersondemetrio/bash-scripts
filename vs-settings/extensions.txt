@@ -26,6 +26,7 @@ ms-vscode.makefile-tools
 planbcoding.vscode-react-refactor
 redhat.java
 redhat.vscode-xml
+solomonkinard.git-blame
 streetsidesoftware.code-spell-checker
 stylelint.vscode-stylelint
 tamj0rd2.ts-quickfixes-extension

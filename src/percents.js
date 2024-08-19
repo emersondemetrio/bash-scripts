@@ -1,19 +1,27 @@
 const total = process.argv[2];
 const percent = process.argv[3];
-
 const mode = process.argv[4];
 
-if (!total || !percent || isNaN(total) || isNaN(percent)) {
-	console.log('Please provide a total and a percent');
+const allowedModes = ['p', 't'];
+
+const exitWithHelp = (help, extra = '') => {
+	console.log(help, extra);
 	process.exit();
+};
+
+if (mode && !allowedModes.includes(mode)) {
+	exitWithHelp('Please provide a valid mode', allowedModes);
+}
+
+if (!total || !percent || isNaN(total) || isNaN(percent)) {
+	exitWithHelp('Please provide a total and a percent');
 }
 
 const modes = {
-	p: (y, N) => `Q: how much is ${y}% of ${N}?`,
-	t: (y, N) => `Q: x is ${y}% of ${N}, what is x?`,
+	p: (y, N) => `Q: How much is ${y}% of a total of ${N}?`,
+	t: (y, N) => `Q: Given that x is ${y}% of ${N}, how much is x?`,
 };
-
-console.log(`\n`);
+console.log('\n');
 console.log(modes[mode || 'p'](percent, total), '\n');
 
 if (!mode || mode === 'p') {
@@ -23,7 +31,6 @@ if (!mode || mode === 'p') {
 
 if (mode === 't') {
 	const result = (percent / 100) * total;
-	console.log(`> ${percent}% of ${total} is ${result}`);
+	console.log(`> ${percent}% of ${total} is = ${result}`);
 	console.log(`> ${total} - ${result} = ${total - result}`);
 }
-console.log(`\n`);

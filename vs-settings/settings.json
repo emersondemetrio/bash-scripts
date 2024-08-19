@@ -62,6 +62,7 @@
 		"Demetrio",
 		"dkfe",
 		"drivekyte",
+		"jsonify",
 		"kustomer",
 		"Kyte",
 		"Millis",
@@ -71,18 +72,16 @@
 		"Pressable",
 		"zustand"
 	],
-	"vscode-json-editor.theme": "dark",
 	"[javascriptreact]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"editor.linkedEditing": true,
-	"vscode-pets.petType": "dog",
 	"window.commandCenter": false,
 	"[python]": {
-		"editor.formatOnSave": true,
+		"editor.formatOnSave": false,
 		"editor.codeActionsOnSave": {
-			"source.fixAll": "explicit",
-			"source.organizeImports": "explicit"
+			// "source.fixAll": "explicit",
+			// "source.organizeImports": "explicit"
 		},
 		"editor.defaultFormatter": "charliermarsh.ruff"
 	},
