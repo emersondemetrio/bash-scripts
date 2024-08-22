@@ -105,3 +105,4 @@ alias time-conversion="node ~/scripts/src/time-conversion.js"
 alias timeconversion="node ~/scripts/src/time-conversion.js"
 
 alias http-code="node ~/scripts/src/http-codes.js"
+alias http-status="http-code"
