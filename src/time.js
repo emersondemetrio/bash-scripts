@@ -17,6 +17,10 @@ const locations = [
 		timeZone: 'Europe/Berlin',
 		location: 'Munich',
 	},
+	{
+		timeZone: here,
+		location: 'Local',
+	},
 ];
 
 const getTzDateString = (timeZone) => {
