@@ -54,6 +54,7 @@ const generateResponse = () =>
 		const diff = Math.floor((now - currentDate) / (1000 * 60 * 60));
 
 		return {
+			timeZone,
 			current: isCurrent(timeZone) ? '✅' : '',
 			location,
 			date: formatDate(currentDate),
