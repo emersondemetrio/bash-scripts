@@ -10,7 +10,7 @@ rm aliases/aliases-surfer.sh
 rm aliases/aliases-flaggr.sh
 rm aliases/aliases-fleet.sh
 
-ls aliases
+ls -l aliases
 
 ### Syncing src
 echo
@@ -18,16 +18,16 @@ echo "Syncing src"
 
 cp -R ~/scripts/src .
 
-rm -rf src/verify-user.sh
-rm -rf src/new-react-component
-rm src/open-fleet*
-rm src/new_branch.sh
-rm src/random-pass.py
-rm src/start-all.sh
-rm src/open-issue.sh
-rm src/get-merge-request.py
+rm -rf src/sh/verify-user.sh
+rm -rf src/python/new-react-component
+rm src/js/open-fleet*
+rm src/sh/open-fleet*
+rm src/python/random-pass.py
+rm src/sh/start-all.sh
+rm src/sh/open-issue.sh
+rm src/python/get-merge-request.py
 
-ls src
+ls -l src
 
 ### Syncing vscode settings
 echo "Syncing vscode settings"
@@ -40,7 +40,7 @@ code --list-extensions >$VS_SETTINGS_DIR/extensions.txt
 cp -r ~/Library/Application\ Support/Code/User/snippets/ $VS_SETTINGS_DIR
 
 ### Clean up
-search_string="emersondemetrio"
+search_string="$USER"
 replace_string="<your-path>"
 
 # Export LC_ALL to avoid illegal byte sequence errors

@@ -1,16 +1,16 @@
 alias chrome='open -a "Google Chrome"'
 alias cat_scripts='cat package.json | jq ".scripts"'
 alias cat-scripts="cat_scripts"
-alias random-pass='~/scripts/src/random-pass.py'
+alias random-pass='~/scripts/src/python/random-pass.py'
 alias genpass='random-pass'
-alias realpath='~/scripts/src/realpath.sh'
-alias nrc='~/scripts/src/new-react-component/nrc.py'
+alias realpath='~/scripts/src/sh/realpath.sh'
+alias nrc='~/scripts/src/python/new-react-component/nrc.py'
 alias tz='chrome "http://localhost:3666"'
-alias dashcase='~/scripts/src/dash-case.js'
+alias dashcase='~/scripts/src/js/dash-case.js'
 alias cased=dashcase
 alias casedash=dashcase
 
-alias reset_modules='~/scripts/src/reset-modules.sh'
+alias reset_modules='~/scripts/src/sh/reset-modules.sh'
 alias reset-modules='reset_modules'
 alias resetmodules='reset_modules'
 alias reset_packages='reset_modules'
@@ -30,7 +30,7 @@ alias update-src="update_source"
 alias updatesrc='update_source'
 alias update_s='update_source'
 
-alias video-to-gif='~/scripts/src/video-to-gif.sh'
+alias video-to-gif='~/scripts/src/sh/video-to-gif.sh'
 alias to-gif="video-to-gif"
 alias togif="video-to-gif"
 alias vs='code .'
@@ -42,9 +42,9 @@ alias edit-scripts='editscripts'
 alias scripts-edit='editscripts'
 alias scriptsedit='editscripts'
 
-alias interval="node ~/scripts/src/interval.js"
+alias interval="node ~/scripts/src/js/interval.js"
 
-alias brazil="node ~/scripts/src/time.js"
+alias brazil="node ~/scripts/src/js/time.js"
 alias brasil="brazil"
 
 google_search() {
@@ -69,11 +69,11 @@ encode_base64() {
 alias encode-base64="encode_base64"
 alias decode-base64="decode_base64"
 
-alias percent='node ~/scripts/src/percents.js'
+alias percent='node ~/scripts/src/js/percents.js'
 alias topercent='percent'
 alias to-percent='percent'
 
-alias create-html-file="~/scripts/src/create-html-file.js"
+alias create-html-file="~/scripts/src/js/create-html-file.js"
 alias html-file="create-html-file"
 
 alias to-mp4="ffmpeg -i $1 -codec copy $2"
@@ -95,16 +95,16 @@ alias calendar="chrome https://calendar.google.com/calendar/u/1/r"
 alias cale="calendar"
 alias cald="calendar"
 
-alias sizeof="~/scripts/src/file.sh"
+alias sizeof="~/scripts/src/sh/file.sh"
 alias new="~/scripts/new-terminal.sh"
 
-alias in_minutes="node ~/scripts/src/time-conversion.js"
-alias inminutes="node ~/scripts/src/time-conversion.js"
+alias in_minutes="node ~/scripts/src/js/time-conversion.js"
+alias inminutes="node ~/scripts/src/js/time-conversion.js"
 
-alias time-conversion="node ~/scripts/src/time-conversion.js"
-alias timeconversion="node ~/scripts/src/time-conversion.js"
+alias time-conversion="node ~/scripts/src/js/time-conversion.js"
+alias timeconversion="node ~/scripts/src/js/time-conversion.js"
 
-alias http-code="node ~/scripts/src/http-codes.js"
+alias http-code="node ~/scripts/src/js/http-codes.js"
 alias http-status="http-code"
 
-alias salaries="go run ~/scripts/src/salaries.go"
+alias salaries="go run ~/scripts/src/go/salaries.go"
