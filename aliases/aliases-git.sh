@@ -51,6 +51,7 @@ alias git-remove-untracked="git clean -f"
 alias push_origin="~/scripts/src/sh/push-origin.sh"
 alias push-origin="push_origin"
 alias pushorigin="push-origin"
+alias pusho="push-origin"
 
 alias fpushorigin="~/scripts/src/sh/git-push-force.sh"
 alias faddallandpush="~/scripts/src/sh/git-add-all-force.sh"
@@ -73,7 +74,7 @@ alias gobranch="git checkout $1"
 
 ## Copy diff to clipboard
 
-alias copy-diff="git diff origin/main | pbcopy"
+alias copy-diff="~/scripts/src/sh/copy-diff.sh"
 alias copydiff="copy-diff"
 
 ## end Copy diff to clipboard

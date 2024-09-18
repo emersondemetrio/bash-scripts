@@ -1,4 +1,4 @@
-alias cammel="python3 ~/scripts/src/python/cammel.py $1"
+alias cammel="python3 ~/scripts/src/python/camel.py $1"
 alias camel="cammel"
 
 alias upper="go run ~/scripts/src/go/strings.go upper"
