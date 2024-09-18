@@ -1,6 +1,6 @@
 ### Syncing Aliases
 echo
-echo "Syncing aliases"
+echo "Syncing aliases..."
 
 cp -R ~/scripts/aliases/ aliases
 
@@ -14,7 +14,7 @@ ls -l aliases
 
 ### Syncing src
 echo
-echo "Syncing src"
+echo "Syncing src..."
 
 cp -R ~/scripts/src .
 
@@ -30,7 +30,8 @@ rm src/python/get-merge-request.py
 ls -l src
 
 ### Syncing vscode settings
-echo "Syncing vscode settings"
+echo
+echo "Syncing vscode settings..."
 
 VS_SETTINGS_DIR=./vs-settings
 

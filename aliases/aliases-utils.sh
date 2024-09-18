@@ -108,3 +108,5 @@ alias http-code="node ~/scripts/src/js/http-codes.js"
 alias http-status="http-code"
 
 alias salaries="go run ~/scripts/src/go/salaries.go"
+
+alias camera="chrome 'https://emerson.run/#/labs/camera'"
