@@ -1,12 +1,22 @@
 #!/usr/local/bin/node
 
-const removeMultipleDashes = (s) => s.replace(/-+/g, '-');
+const cleanUpString = (s) => {
+  return s
+    .toLowerCase() // A -> a
+    .replace(/[\[\]]/g, "") // [ge-123] -> ge-123
+    .replace(/[^a-z0-9\s-]/g, "") // non alphanumeric -> ""
+    .replace(/\s+/g, "-") // space -> -
+    .trim(); // trim
+};
 
-const replaceSpacesWith = (s, r = '-') => s.toLowerCase().replace(/\s/g, r);
+const removeMultipleDashes = (s) => s.replace(/-+/g, "-"); // All -- -> -
 
-const dashAll = (...all) => all.map(replaceSpacesWith).join('-');
+const dashAll = (...all) => {
+  const cleanedArgs = all.map(cleanUpString).map(removeMultipleDashes); // Clean and remove multiple dashes
+  return cleanedArgs.join("-");
+};
 
-// [ 'bin', 'this-file.js', ...everything-else ]
 const args = process.argv.slice(2);
 
-console.log(removeMultipleDashes(dashAll(...args)));
+const finalString = dashAll(...args);
+console.log(finalString);

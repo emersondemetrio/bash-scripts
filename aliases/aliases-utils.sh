@@ -6,9 +6,6 @@ alias genpass='random-pass'
 alias realpath='~/scripts/src/sh/realpath.sh'
 alias nrc='~/scripts/src/python/new-react-component/nrc.py'
 alias tz='chrome "http://localhost:3666"'
-alias dashcase='~/scripts/src/js/dash-case.js'
-alias cased=dashcase
-alias casedash=dashcase
 
 alias reset_modules='~/scripts/src/sh/reset-modules.sh'
 alias reset-modules='reset_modules'
