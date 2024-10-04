@@ -11,3 +11,6 @@ src/new_branch.sh
 src/random-pass.py
 src/start-all.sh
 src/open-issue.sh
+
+!src/go/**/*.go
+!src/go/**/*.sh

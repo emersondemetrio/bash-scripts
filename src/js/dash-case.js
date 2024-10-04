@@ -12,11 +12,10 @@ const cleanUpString = (s) => {
 const removeMultipleDashes = (s) => s.replace(/-+/g, "-"); // All -- -> -
 
 const dashAll = (...all) => {
-  const cleanedArgs = all.map(cleanUpString).map(removeMultipleDashes); // Clean and remove multiple dashes
-  return cleanedArgs.join("-");
+  const cleanedArgs = all.map(cleanUpString); // Clean and remove multiple dashes
+  return removeMultipleDashes(cleanedArgs.join("-"));
 };
 
 const args = process.argv.slice(2);
 
-const finalString = dashAll(...args);
-console.log(finalString);
+console.log(dashAll(...args));

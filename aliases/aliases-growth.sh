@@ -3,3 +3,5 @@ _JIRA_G_URL="https://drivekyte.atlassian.net/jira/software/c/projects/GE/boards/
 
 alias issues-ge='chrome "$_JIRA_G_URL"'
 alias growth-issues='issues-ge'
+
+alias run-web='cd ~/projects/kyte/frontend-monorepo/apps/consumer-web; pwd; yarn dev'

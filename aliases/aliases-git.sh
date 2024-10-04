@@ -92,3 +92,5 @@ copy_branch_name() {
 alias copy-branch-name="copy_branch_name"
 alias copybranchname="copy-branch-name"
 alias copybn="copy-branch-name"
+
+alias gcnv="git add .; git commit --no-verify"

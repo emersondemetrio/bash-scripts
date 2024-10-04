@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-func uncamel(value string) string {
+func uncamel(value string, repl string) string {
 	// myString -> my-string
 
 	var result string         // basic var declaration in go
@@ -16,7 +16,7 @@ func uncamel(value string) string {
 		} else if v >= 'A' && v <= 'Z' {
 			// in go, you can compare chars like this
 			// like a>='A' and a<='Z' in C
-			result += "-" + strings.ToLower(string(v)) // adds a dash before the char
+			result += repl + strings.ToLower(string(v)) // adds a dash before the char
 		} else {
 			result += string(v) // just add the char
 		}
@@ -32,6 +32,10 @@ func main() {
 	}
 
 	value := os.Args[1]
+	repl := "-"
+	if len(os.Args) > 2 {
+		repl = os.Args[2]
+	}
 
-	fmt.Println(uncamel(value))
+	fmt.Println(uncamel(value, repl))
 }
