@@ -36,12 +36,15 @@ function dexec() {
   docker exec -it "$1" $shell
 }
 
-function dcup() {
+function ddown() {
   echo "running: docker compose up -d"
   docker compose up -d
 }
 
-function dcdown() {
+function dup() {
   echo "running: docker compose down"
   docker compose down
 }
+
+alias ddown="ddown"
+alias dup="dup"

@@ -1,5 +1,5 @@
 # folders
-alias cdp='cd ${HOME}/projects; clas;'
+alias cdp='cd ${HOME}/projects;'
 alias cpd='cdp'
 alias cdd='cd ${HOME}/Downloads; clas;'
 alias cds='cd ${HOME}/Desktop/'
@@ -28,3 +28,4 @@ remove_files_on_clipboard() {
 }
 
 alias rmfc='remove_files_on_clipboard'
+alias rmcp='remove_files_on_clipboard'

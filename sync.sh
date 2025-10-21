@@ -25,11 +25,18 @@ echo "Syncing vscode settings..."
 
 VS_SETTINGS_DIR=./vs-settings
 
-cp ~/Library/Application\ Support/Code/User/settings.json $VS_SETTINGS_DIR
-cp ~/Library/Application\ Support/Code/User/keybindings.json $VS_SETTINGS_DIR
-code --list-extensions >$VS_SETTINGS_DIR/extensions.txt
-cursor --list-extensions >$VS_SETTINGS_DIR/cursor-extensions.txt
-cp -r ~/Library/Application\ Support/Code/User/snippets/ $VS_SETTINGS_DIR
+cp ~/Library/Application\ Support/Cursor/User/settings.json $VS_SETTINGS_DIR
+cp ~/Library/Application\ Support/Cursor/User/keybindings.json $VS_SETTINGS_DIR
+
+if command -v code >/dev/null 2>&1; then
+  code --list-extensions >$VS_SETTINGS_DIR/extensions.txt
+fi
+
+if command -v cursor >/dev/null 2>&1; then
+  cursor --list-extensions >$VS_SETTINGS_DIR/cursor-extensions.txt
+fi
+
+cp -r ~/Library/Application\ Support/Cursor/User/snippets/ $VS_SETTINGS_DIR
 
 ### Clean up
 search_string="$USER"

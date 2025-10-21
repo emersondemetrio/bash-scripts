@@ -3,6 +3,9 @@ alias lsbp="list-services-by-port"
 alias lsp="list-services-by-port"
 
 _open_chrome() {
+    echo
+    echo "Opening Chrome: $1"
+    echo
     # Check if input is a valid file path
     if [[ -f "$1" ]]; then
         open -a "Google Chrome" "$1"
@@ -32,6 +35,13 @@ alias reset_packages='reset_modules'
 alias reset-packages='reset_modules'
 alias resetpackages='reset_modules'
 
+alias npm_reset="rm -rf ./node_modules; npm install; ls -las"
+alias npmreset="npm_reset"
+alias npm-reset="npm_reset"
+alias npmreset="npm_reset"
+alias npmr="npm_reset"
+alias rmp="npm_reset"
+
 alias test_diff='clear; ./node_modules/.bin/jest -- $(git diff --name-only -- "*.test.tsx" "*.test.config.tsx")'
 alias test-diff='test_diff'
 
@@ -49,7 +59,7 @@ alias video-to-gif='~/scripts/src/sh/video-to-gif.sh'
 alias to-gif="video-to-gif"
 alias togif="video-to-gif"
 
-alias vscode="open -a 'Visual Studio Code'"
+alias vscode="open -a 'Cursor'"
 alias code="cursor"
 alias cdo="cursor"
 alias cde="cursor"
@@ -59,7 +69,7 @@ alias vs="vscode ."
 alias c.="vscode ."
 alias code.="vscode ."
 
-alias editscripts="code ~/scripts/"
+alias editscripts="code ~/scripts"
 alias edit-scripts="editscripts"
 alias scripts-edit="editscripts"
 alias scriptsedit="editscripts"
@@ -111,9 +121,10 @@ alias yanr="yarn"
 
 alias github="chrome 'https://github.com/<your-path>?tab=repositories'"
 
-alias emerson="cd ~/projects/personal/<your-path>.github.io"
+alias emerson="cd ~/projects/personal/<your-path>.github.io; pwd"
 alias emers="emerson"
 alias emer="emerson"
+alias ems="emerson"
 
 alias sizeof="~/scripts/src/sh/file.sh"
 alias new="~/scripts/new-terminal.sh"
@@ -126,7 +137,7 @@ alias timeconversion="node ~/scripts/src/js/time-conversion.js"
 
 alias http-code="node ~/scripts/src/js/http-codes.js"
 alias http-status="http-code"
-
+alias http-codes="http-code"
 alias salaries="go run ~/scripts/src/go/salaries.go"
 
 alias camera="chrome 'https://emerson.run/#/labs/camera'"

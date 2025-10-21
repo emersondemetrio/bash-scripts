@@ -56,9 +56,15 @@ alias push_origin="~/scripts/src/sh/push-origin.sh"
 alias push-origin="push_origin"
 alias pushorigin="push-origin"
 alias pusho="push-origin"
+alias puhso="push-origin"
 
 alias fpushorigin="~/scripts/src/sh/git-push-force.sh"
 alias faddallandpush="~/scripts/src/sh/git-add-all-force.sh"
+
+alias fpusho="fpushorigin"
+alias fpush="fpushorigin"
+
+alias amend_no_check="git commit --amend --no-edit --no-verify; git push -f"
 
 # Search branch
 alias sbranch="~/scripts/src/sh/search-branch.sh"
@@ -75,6 +81,13 @@ alias remove-branch="rmb"
 alias ck="~/scripts/src/sh/ck.sh"
 alias gobranch="git checkout $1"
 # end git
+
+## Checkout branch (with create)
+alias create-branch="git checkout -b $1"
+alias crebranch="create-branch"
+# end git
+
+
 
 ## Copy diff to clipboard
 
@@ -138,9 +151,12 @@ url_from_branch() {
 }
 
 # Alias to open the remote repository in Google Chrome
-alias open-remote='open -a "Google Chrome" "$(url_from_branch)"'
-alias open-issues='open -a "Google Chrome" "$(url_from_branch)/issues"'
-alias open-mrs='open -a "Google Chrome" "$(url_from_branch)/pulls"'
-alias merges='open -a "Google Chrome" "$(url_from_branch)/pulls/$USER"'
+alias open-remote='chrome "$(url_from_branch)"'
+alias open-issues='chrome "$(url_from_branch)/issues"'
+alias open-mrs='chrome "$(url_from_branch)/pulls"'
+alias merges='chrome "$(url_from_branch)/pulls/$USER"'
+alias merg="merges"
+alias mrgs="merges"
+alias mr="merges"
 
 alias no_edit_amend_and_push="echo 'Assuming you have added files already.'; git commit --amend --no-edit --no-verify; git push -f"

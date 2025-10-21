@@ -1,0 +1,21 @@
+list = [
+    {"name": "Fathom.app", "binUrl": ""},
+    {"name": "GIMP.app", "binUrl": "https://download.gimp.org/gimp/v3.0/macos/gimp-3.0.4-arm64.dmg"},
+    {"name": "Obsidian.app", "binUrl": ""},
+    {"name": "Ollama.app", "binUrl": ""},
+    {"name": "Slack.app", "binUrl": ""},
+    {"name": "Visual Studio Code.app", "binUrl": ""},
+    {"name": "VLC.app", "binUrl": ""},
+    {"name": "AltTab.app", "binUrl": ""},
+    {"name": "Brave Browser.app", "binUrl": ""},
+    {"name": "Cursor.app", "binUrl": ""},
+    {"name": "DBeaver.app", "binUrl": ""},
+    {"name": "Docker.app", "binUrl": ""},
+    {"name": "Google Chrome.app", "binUrl": ""},
+    {"name": "LibreOffice.app", "binUrl": ""},
+    {"name": "Sublime Text.app", "binUrl": ""},
+    {"name": "Universal Launcher.app", "binUrl": ""},
+    {"name": "Xcode.app", "binUrl": ""},
+    {"name": "zoom.us.app", "binUrl": ""},
+]
+
