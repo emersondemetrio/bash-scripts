@@ -16,11 +16,8 @@ source ~/scripts/aliases/aliases-android.sh
 source ~/scripts/aliases/aliases-folders.sh
 source ~/scripts/aliases/aliases-ai.sh
 
-export NODE_OPTIONS='--trace-deprecation'
-
 alias meld="open -W -a Meld $@"
 export PATH="/opt/homebrew/opt/sqlite/bin:$PATH"
-
 
 # SQLITE settings for M1
 export PYTHON=/opt/homebrew/bin/python3
@@ -31,3 +28,18 @@ export CPPFLAGS="-I/opt/homebrew/opt/sqlite/include"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# VS CODE
+alias code="open -a \"Visual Studio Code\""
+alias cursor="open -a \"Cursor\""
+# / VS CODE
+
+# pnpm
+export PNPM_HOME="/Users/emersondemetrio/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+export AWS_PAGER=""

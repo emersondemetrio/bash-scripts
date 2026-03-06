@@ -1,5 +1,4 @@
 albert.tabout
-anysphere.cursorpyright
 astro-build.astro-vscode
 aykutsarac.jsoncrack-vscode
 bobmagicii.autofoldyeah

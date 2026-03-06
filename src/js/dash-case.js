@@ -1,4 +1,4 @@
-#!/opt/homebrew/bin/node
+#!/Users/emersondemetrio/.nvm/versions/node/v24.11.0/bin/node
 
 const cleanUpString = (s, exceptions = []) => {
   // Create a regex pattern that excludes the exceptions

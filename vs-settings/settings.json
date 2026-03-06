@@ -1,119 +1,120 @@
 {
-	"editor.snippetSuggestions": "top",
-	"[typescript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"prettier.useTabs": true,
-	"workbench.startupEditor": "none",
-	"[jsonc]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"editor.renderControlCharacters": true,
-	"files.autoSave": "afterDelay",
-	"[typescriptreact]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"editor.accessibilitySupport": "off",
-	"[html]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"prettier.tabWidth": 4,
-	"explorer.confirmDelete": false,
-	"editor.minimap.enabled": false,
-	"[json]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[javascript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"security.workspace.trust.enabled": false,
-	"security.workspace.trust.untrustedFiles": "newWindow",
-	"prettier.singleQuote": true,
-	"[dart]": {
-		"editor.suggest.snippetsPreventQuickSuggestions": false,
-		"editor.suggestSelection": "first",
-		"editor.tabCompletion": "onlySnippets",
-		"editor.wordBasedSuggestions": "off",
-		"editor.selectionHighlight": false,
-		"editor.formatOnSave": true,
-		"editor.formatOnType": true,
-		"editor.rulers": [80]
-	},
-	"editor.codeActionsOnSave": {
-		"source.fixAll.stylelint": "explicit",
-		"source.fixAll.eslint": "explicit"
-	},
-	"files.trimTrailingWhitespace": true,
-	"editor.renderWhitespace": "all",
-	"javascript.updateImportsOnFileMove.enabled": "always",
-	"editor.inlayHints.enabled": false,
-	"terminal.integrated.env.osx": {
-		"FIG_NEW_SESSION": "1",
-		"Q_NEW_SESSION": "1"
-	},
-	"explorer.confirmDragAndDrop": false,
-	"[css]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"redhat.telemetry.enabled": false,
-	"cSpell.userWords": [
-		"Calculadora",
-		"cocoapods",
-		"Demetrio",
-		"dkfe",
-		"drivekyte",
-		"jsonify",
-		"kustomer",
-		"Kyte",
-		"Millis",
-		"Modalize",
-		"Onfido",
-		"portalize",
-		"Pressable",
-		"zustand"
-	],
-	"[javascriptreact]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"editor.linkedEditing": true,
-	"window.commandCenter": false,
-	"[python]": {
-		"editor.formatOnSave": false,
-		"editor.codeActionsOnSave": {
-			// "source.fixAll": "explicit",
-			// "source.organizeImports": "explicit"
-		},
-		"editor.defaultFormatter": "ms-python.autopep8"
-	},
-	"window.zoomLevel": 1,
-	"workbench.editor.enablePreview": false,
-	"editor.inlineSuggest.enabled": true,
-	"[svg]": {
-		"editor.defaultFormatter": "jock.svg"
-	},
-	"svg.preview.mode": "svg",
-	"editor.stickyTabStops": true,
-	"editor.stickyScroll.enabled": true,
-	"editor.rulers": [80],
-	"github.copilot.editor.enableAutoCompletions": true,
-	"makefile.configureOnOpen": true,
-	"explorer.fileNesting.patterns": {
-		"*.ts": "${capture}.js",
-		"*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
-		"*.jsx": "${capture}.js",
-		"*.tsx": "${capture}.ts",
-		"tsconfig.json": "tsconfig.*.json",
-		"package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb",
-		"pubspec.yaml": "pubspec.lock,pubspec_overrides.yaml,.packages,.flutter-plugins,.flutter-plugins-dependencies,.metadata",
-		"*.dart": "${capture}.g.dart",
-		"*.sqlite": "${capture}.${extname}-*",
-		"*.db": "${capture}.${extname}-*",
-		"*.sqlite3": "${capture}.${extname}-*",
-		"*.db3": "${capture}.${extname}-*",
-		"*.sdb": "${capture}.${extname}-*",
-		"*.s3db": "${capture}.${extname}-*"
-	},
-	"github.copilot.enable": {
-		"*": false
-	}
+    "editor.snippetSuggestions": "top",
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "prettier.useTabs": true,
+    "workbench.startupEditor": "none",
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.renderControlCharacters": true,
+    "files.autoSave": "afterDelay",
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "editor.accessibilitySupport": "off",
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "prettier.tabWidth": 4,
+    "explorer.confirmDelete": false,
+    "editor.minimap.enabled": false,
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "security.workspace.trust.enabled": false,
+    "security.workspace.trust.untrustedFiles": "newWindow",
+    "prettier.singleQuote": true,
+    "[dart]": {
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": "off",
+        "editor.selectionHighlight": false,
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            80
+        ]
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.stylelint": "explicit",
+        "source.fixAll.eslint": "explicit"
+    },
+    "files.trimTrailingWhitespace": true,
+    "editor.renderWhitespace": "all",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "editor.inlayHints.enabled": false,
+    "terminal.integrated.env.osx": {
+        "FIG_NEW_SESSION": "1",
+        "Q_NEW_SESSION": "1"
+    },
+    "explorer.confirmDragAndDrop": false,
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "redhat.telemetry.enabled": false,
+    "cSpell.userWords": [
+        "Calculadora",
+        "cocoapods",
+        "Demetrio",
+        "dkfe",
+        "drivekyte",
+        "jsonify",
+        "kustomer",
+        "Kyte",
+        "Millis",
+        "Modalize",
+        "Onfido",
+        "portalize",
+        "Pressable",
+        "zustand"
+    ],
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.linkedEditing": true,
+    "window.commandCenter": false,
+    "[python]": {
+        "editor.formatOnSave": false,
+        "editor.codeActionsOnSave": {},
+        "editor.defaultFormatter": "ms-python.autopep8"
+    },
+    "window.zoomLevel": 1,
+    "workbench.editor.enablePreview": false,
+    "editor.inlineSuggest.enabled": true,
+    "[svg]": {
+        "editor.defaultFormatter": "jock.svg"
+    },
+    "svg.preview.mode": "svg",
+    "editor.stickyTabStops": true,
+    "editor.stickyScroll.enabled": true,
+    "editor.rulers": [
+        80
+    ],
+    "github.copilot.editor.enableAutoCompletions": true,
+    "makefile.configureOnOpen": true,
+    "explorer.fileNesting.patterns": {
+        "*.ts": "${capture}.js",
+        "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+        "*.jsx": "${capture}.js",
+        "*.tsx": "${capture}.ts",
+        "tsconfig.json": "tsconfig.*.json",
+        "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb",
+        "pubspec.yaml": "pubspec.lock,pubspec_overrides.yaml,.packages,.flutter-plugins,.flutter-plugins-dependencies,.metadata",
+        "*.dart": "${capture}.g.dart",
+        "*.sqlite": "${capture}.${extname}-*",
+        "*.db": "${capture}.${extname}-*",
+        "*.sqlite3": "${capture}.${extname}-*",
+        "*.db3": "${capture}.${extname}-*",
+        "*.sdb": "${capture}.${extname}-*",
+        "*.s3db": "${capture}.${extname}-*"
+    },
+    "github.copilot.enable": {
+        "*": false
+    }
 }

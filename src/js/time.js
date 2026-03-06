@@ -55,10 +55,11 @@ const generateResponse = () =>
 
 		return {
 			timeZone,
-			current: isCurrent(timeZone) ? '✅' : '',
+			current: isCurrent(timeZone) ? '✅' : '❌',
 			location,
 			date: formatDate(currentDate),
-			diff
+			diff,
+			diffText: diff > 0 ? `Plus ${diff} hours` : `${diff} hours`
 		};
 	});
 

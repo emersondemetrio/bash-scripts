@@ -4,7 +4,7 @@ echo "Syncing aliases..."
 
 cp -R ~/scripts/aliases/ aliases
 
-rm aliases/aliases-ae.sh
+rm aliases/company-name.sh
 
 ls -l aliases
 

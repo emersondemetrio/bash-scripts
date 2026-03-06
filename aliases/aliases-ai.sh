@@ -1,4 +1,4 @@
-alias claude="chrome 'https://claude.ai/new'"
+# alias claude="chrome 'https://claude.ai/new'"
 
 alias prompt="~/scripts/src/python/ai.py"
 alias ollama_prompt="~/scripts/src/python/ai.py -l 'ollama'"

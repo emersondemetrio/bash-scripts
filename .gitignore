@@ -1,3 +1,5 @@
+.zshrc
+
 aliases/aliases-kyte.sh
 aliases/aliases-ops-tooling.sh
 aliases/aliases-surfer.sh

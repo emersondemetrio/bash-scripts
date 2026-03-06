@@ -123,7 +123,7 @@ url_from_branch() {
 
     # exit if there's no git folder
     if [ ! -d .git ]; then
-        echo "https://github.com/orgs/agencyenterprise/repositories"
+        echo "https://github.com/emersondemetrio/repositories"
     fi
 
     # Remove any extra forward slashes and colons from the URL
